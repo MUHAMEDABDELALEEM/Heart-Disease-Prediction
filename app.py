@@ -140,7 +140,7 @@ if st.sidebar.button(labels["predict"]):
 reset = st.sidebar.button(labels["reset"])
 if reset:
     st.session_state.clear()
-    st.experimental_set_query_params()
+    st.query_params.clear()
     st.success("Form reset successfully. Please re-enter the values.")
     st.stop()
 # ========== Footer ==========
