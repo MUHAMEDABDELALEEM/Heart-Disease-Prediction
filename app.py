@@ -96,14 +96,19 @@ else:
 st.title(labels["title"])
 st.markdown("---")
 
+def dual_input(label, min_val, max_val, default):
+    col1, col2 = st.sidebar.columns([2, 1])
+    slider_val = col1.slider(label, min_val, max_val, default, key=f"{label}_slider")
+    number_val = col2.number_input(label, min_val, max_val, slider_val, key=f"{label}_number")
+    return number_val
+    
 # ========== Sidebar Inputs ==========
 st.sidebar.header("🩺 Enter Patient Data")
-age = st.sidebar.slider(labels["age"], 29, 100, 50)
-gender = st.sidebar.radio(labels["gender"], gender_options)
-height = st.sidebar.slider(labels["height"], 130, 200, 165)
-weight = st.sidebar.slider(labels["weight"], 40, 150, 70)
-ap_hi = st.sidebar.slider(labels["ap_hi"], 90, 200, 120)
-ap_lo = st.sidebar.slider(labels["ap_lo"], 60, 130, 80)
+age = dual_input(labels["age"], 29, 100, 50)
+height = dual_input(labels["height"], 130, 200, 165)
+weight = dual_input(labels["weight"], 40, 150, 70)
+ap_hi = dual_input(labels["ap_hi"], 90, 200, 120)
+ap_lo = dual_input(labels["ap_lo"], 60, 130, 80)
 chol_text = st.sidebar.selectbox(labels["chol"], chol_options)
 gluc_text = st.sidebar.selectbox(labels["gluc"], gluc_options)
 
