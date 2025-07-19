@@ -105,6 +105,7 @@ def dual_input(label, min_val, max_val, default):
 # ========== Sidebar Inputs ==========
 st.sidebar.header("🩺 Enter Patient Data")
 age = dual_input(labels["age"], 29, 100, 50)
+gender = st.sidebar.radio(labels["gender"], gender_options)
 height = dual_input(labels["height"], 130, 200, 165)
 weight = dual_input(labels["weight"], 40, 150, 70)
 ap_hi = dual_input(labels["ap_hi"], 90, 200, 120)
