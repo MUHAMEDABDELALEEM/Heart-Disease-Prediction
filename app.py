@@ -137,8 +137,11 @@ if st.sidebar.button(labels["predict"]):
         st.markdown(f'<div class="result" style="color:green;">{labels["result_safe"]}</div>', unsafe_allow_html=True)
 
 # ========== Reset Button ==========
-if st.sidebar.button(labels["reset"]):
-    st.experimental_rerun()
-
+reset = st.sidebar.button(labels["reset"])
+if reset:
+    st.session_state.clear()
+    st.experimental_set_query_params()
+    st.success("Form reset successfully. Please re-enter the values.")
+    st.stop()
 # ========== Footer ==========
 st.markdown(f'<div class="footer">{labels["footer"]}</div>', unsafe_allow_html=True)
