@@ -107,6 +107,11 @@ Multiple classification algorithms were trained and compared:
 └── README.md # Project documentation
 
 ---
+This project was built as part of the # Epsilon AI Data Science Track Final Project.
+Model development, deployment, and documentation by:
+
+MUHAMED ABDEL-ALIM
+Machine Learning Engineer
 
 ## 🚀 How to Run Locally
 
@@ -120,10 +125,6 @@ pip install -r requirements.txt
 # Run the app
 streamlit run app.py
 
-This project was built as part of the Epsilon AI Data Science Track Final Project.
-Model development, deployment, and documentation by:
 
-MUHAMED ABDEL-ALIM
-Machine Learning Engineer
 
 
