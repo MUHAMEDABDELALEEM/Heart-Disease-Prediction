@@ -119,3 +119,11 @@ pip install -r requirements.txt
 
 # Run the app
 streamlit run app.py
+
+This project was built as part of the Epsilon AI Data Science Track Final Project.
+Model development, deployment, and documentation by:
+
+MUHAMED ABDEL-ALIM
+Machine Learning Engineer
+
+
